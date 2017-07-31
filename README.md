@@ -14,10 +14,10 @@
 <h1><a id="Implantao_do_site_modo_1_11"></a>Implantação do site (modo 1)</h1>
 <ul>
 <li>Inicinar o servidor container TomCat (%TOMCAT_HOME%\bin\startup.bat )</li>
-<li>Fazer depoloy em arquivo Api.war(%TOMCAT_HOME%\webapp)</li>
-<li>Fazer depoloy na pasta public (colocar dentro da pasta de deploy : %TOMCAT_HOME%\webapp )</li>
+<li>Inserir arquivo Api.war na pasta de deploy (%TOMCAT_HOME%\webapp)</li>
+<li>Fazer também o deploy da pasta public (%TOMCAT_HOME%\webapp)</li>
 </ul>
-<p>Api salva em arquivo nomes.txt dentro do arquivo WAR. Para o sistem salvar em um  arquivo local nomes.txt siga os seguintes passos:</p>
+<p>Aplicação salva em arquivo nomes.txt dentro do arquivo WAR. Para o sistem salvar em um arquivo local nomes.txt siga os seguintes passos:</p>
 <h1><a id="Implantao_do_site_modo_2_18"></a>Implantação do site (modo 2)</h1>
 <ul>
 <li>Importar a pasta ‘Api’ para dentro da IDE Eclipse;</li>
