@@ -9,7 +9,7 @@ angular.module('app.controllers', [])
 		var body = $scope.nome;
 		
 
-		console.log("salvando");
+		//console.log("salvando");
 		$http.post(apiNames, body ).then(function(result) {
 
           if (result.data.status) {
