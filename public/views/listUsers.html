@@ -1,0 +1,21 @@
+<center>
+	<h1>Lista de Usuarios</h1>
+</center>
+<div align="center">
+	<div class="row">
+		
+		<table ng-if='usuarios.length'>
+			
+		  <thead>
+			<tr>
+			  <th>Usuario</th>
+			</tr>
+		  </thead>
+		  <tbody>
+			<tr ng-repeat="user in usuarios">
+			  <td><strong>{{ user.nome }}</strong></td>
+			</tr>
+		  </tbody>
+		</table>
+	</div>
+</div>
