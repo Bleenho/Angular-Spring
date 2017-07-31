@@ -23,3 +23,7 @@ app.config(function($routeProvider, $locationProvider) {
 app.run(['$rootScope',function($rootScope){
    // $rootScope.path = "C://Users//usuario//Desktop//nomes.txt";
 }]);
+
+app.constant('SETTINGS_SYSTEM', {
+  apiNames: '/Api/names'
+})

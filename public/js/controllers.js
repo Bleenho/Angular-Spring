@@ -1,29 +1,31 @@
 angular.module('app.controllers', [])
 
-.controller('insertUserController', function($scope,$rootScope, $http){
+//Constrola a inserção dos usuarios na lista nomes.txt feitas na pagina insertUsers.html
+.controller('insertUserController', function($scope,$rootScope, $http,SETTINGS_SYSTEM){
 	
-	console.log("Inserir");
 	$scope.nome = "";
 	$scope.msg = "";
 	$scope.addName = function(){
 		var body = $scope.nome;
-		var url = '/Api/names';    
+		
 
 		console.log("salvando");
-		$http.post(url, body ).then(function(result) {
+		$http.post(apiNames, body ).then(function(result) {
 
           if (result.data.status) {
           	console.log("salvo");
-			$scope.msg = "nome add com sucesso";
+			$scope.msg = "Nome inserido na lista com sucesso!";
 			$scope.nome = "";
           } else {
-            $scope.msg = "erro ao add nome";
+            $scope.msg = "Ops!";
           }
         });
 	}
 	
-})
-.controller('listUserController', function($scope, $http, $rootScope){
+}) 
+
+//Constrola a lista de usuarios mostrado na pagina listUsers.html
+.controller('listUserController', function($scope, $http, $rootScope,SETTINGS_SYSTEM){
 	
 	$scope.usuarios = [{
 		nome : ''
@@ -31,7 +33,7 @@ angular.module('app.controllers', [])
 	
 	 $http({
          method: 'GET',
-         url: '/Api/names'
+         url: apiNames
        }).then(function(retorno){
 	 	  console.log( retorno);
 	 	  $scope.usuarios = retorno.data;
@@ -40,5 +42,3 @@ angular.module('app.controllers', [])
        })
 	
 });
-
-//Para nao precisar ficar importando todos os controllers este encapsulo o controller usuarios e outros caso precise ser criado
