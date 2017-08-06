@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>README.md</title><style></style></head><body id="preview">
+<!DOCTYPE html><html><body id="preview">
 <h1><a id="Requisitos_0"></a>Requisitos</h1>
 <ul>
 <li>Java</li>
