@@ -20,7 +20,7 @@ public class NameRestcontroller {
 	
 
 	@RequestMapping(value = "/names", method = RequestMethod.GET)
-	public List<Usuario> AllNames(){
+	public List<Usuario> allNames(){
 			return repository.findAllName();
 	}
 	
